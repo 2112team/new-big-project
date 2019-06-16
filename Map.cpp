@@ -32,6 +32,11 @@ bool CMap::init()
 	//子弹管理类
 	this->addChild(CBulletMgr::getInstance());
 
+	//添加一个水晶
+	m_pMonMgr->addCrystal();
+	//添加一个防御塔
+	m_pMonMgr->addTower();
+	
 	//每3秒生成一个怪物
 	this->schedule(schedule_selector(CMap::addEnemy), 3.0f);
 
